@@ -4,9 +4,6 @@ html {
 #month {
     text-align: center;
 }
-div {
-    height: 2000px;
-}
 #date {
     font-family: impact;
     font-size: 20px;
@@ -15,8 +12,9 @@ div {
 #calendarDiv {
     margin-left: 5px;
     float: left;
-    width: 80%;
+    width: 78%;
     background-color: #45d17a;
+    height: 98%;
 }
 #calendarTable {
     margin-left: 5px;
@@ -34,8 +32,9 @@ td {
     border-radius: 5px;
 }
 #tasks {
+    height: 98%;
     margin-right: 5px;
     float: right;
-    width: 19%;
+    width: 18%;
     background-color: #acacac;
 }

@@ -15,7 +15,7 @@
     <div id='calendarDiv'>
         <table id='calendarTable'>
             <tr>
-                <h2 id='month'>{{now}}</h3>
+                <h2 id='month'>{{month}}</h3>
             </tr>
             <tr>
                 <th>Sunday</th>
@@ -31,7 +31,7 @@
             <tr>
                 {% for day in week %}
                 <td>
-                    <p id='date'>{{day.day}}</p> {% for e in events %} {% if e.startDate.day == day.day %}
+                    <p id='date' {% if day.day == now.day %} style="color:blue;font-weight:bold;" {%endif%}>{{day.day}}</p> {% for e in events %} {% if e.startDate.day == day.day %}
                     <li>{{e.title}}</li>{%endif%} {%endfor%}
                     
                 </td>
@@ -40,9 +40,12 @@
             {%endfor%}
         </table>
     </div>
+    
     <div id='tasks'>
-
-
+        <h3>Tasks</h3>
+        {% for task in tasks%}
+        <li>{{task.title}}</li>
+        {%endfor%}
         <div>
 
         </div>
